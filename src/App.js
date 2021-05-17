@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import User from './shared/organisms/User';
 import './App.css';
 
-const Avatar = () => {
+function Avatar() {
   return (
     <img 
       src="https://picsum.photos/id/1035/200"

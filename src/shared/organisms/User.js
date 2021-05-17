@@ -1,7 +1,7 @@
 import React from 'react';
 import './User.css';
 
-const User = (props) => {
+function User(props) {
   const usrName = props.name || 'Name not available';
   const description = props.description || 'Description not available';
   const age = props.age || 'Age not available';
