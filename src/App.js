@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import User from './shared/organisms/User';
 import './App.css';
 
 const Avatar = () => {
@@ -12,12 +13,28 @@ const Avatar = () => {
   )
 };
 
+const age = (birthYear) => {
+  const currentYear = new Date().getFullYear();
+  return currentYear - birthYear;
+}
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1> Sample title </h1>
-        <Avatar />
+      <div className="userCardContainer">
+        {/* Full data */}
+        <div className="userCard">
+        <User 
+          name = "Emmanuel Arturo"
+          description = "Hello, this is my description"
+          age = {age(1998)}
+          avatar = {<Avatar />}
+        />
+        </div>
+        {/* No data */}
+        <div className="userCard">
+          <User />
+        </div>
       </div>
     );
   }

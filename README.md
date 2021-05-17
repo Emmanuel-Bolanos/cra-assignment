@@ -5,7 +5,7 @@
 - [X] Create a project using CRA
 - [X] Replace App.js component with a Class Component
 - [X] Create the Avatar component
-- [ ] Create the User Component
+- [X] Create the User Component
 - [ ] Create Hobbies Component
 - [ ] Import all component on App
 
@@ -16,14 +16,14 @@
 - [X] The component should have a <img /> with a picture from the internet
 
 ### User Component
-- [ ] Create a component in another file
-- [ ] Use Functional Components
+- [X] Create a component in another file
+- [X] Use Functional Components
 
 ### Props
-- [ ] name: string
-- [ ] description: string
-- [ ] age: number
-- [ ] avatar: component
+- [X] name: string
+- [X] description: string
+- [X] age: number
+- [X] avatar: component
 
 ### Hobbies Component
 - [ ] Create a component in a separated file
