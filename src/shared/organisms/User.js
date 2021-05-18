@@ -1,17 +1,17 @@
 import React from 'react';
 import './User.css';
 
-function User(props) {
-  const usrName = props.name || 'Name not available';
-  const description = props.description || 'Description not available';
-  const age = props.age || 'Age not available';
-  const avatar = props.avatar || 'Avatar not available';
+function User({name, description, age, avatar}) {
+  const usrName = name || 'Name not available';
+  const usrDecription = description || 'Description not available';
+  const usrAge = age || 'Age not available';
+  const usrAvatar = avatar || 'Avatar not available';
   return (
     <div className="userInfo">
+      <p> {usrAvatar} </p>
       <p> {usrName} </p>
-      <p> {description} </p>
-      <p> {age} </p>
-      <p> {avatar} </p>
+      <p> {usrDecription} </p>
+      <p> Age: {usrAge} </p>
     </div>
   )
 }
