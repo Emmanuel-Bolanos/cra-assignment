@@ -7,11 +7,13 @@ function User({name, description, age, avatar}) {
   const usrAge = age || 'Age not available';
   const usrAvatar = avatar || 'Avatar not available';
   return (
-    <div className="userInfo">
+    <div className="userInfoContainer">
       <p> {usrAvatar} </p>
-      <p> {usrName} </p>
-      <p> {usrDecription} </p>
-      <p> Age: {usrAge} </p>
+      <div className="usrData">
+        <h2> {usrName} </h2>
+        <p> {usrDecription} </p>
+        <p> Age: {usrAge} </p>
+      </div>
     </div>
   )
 }

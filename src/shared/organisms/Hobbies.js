@@ -17,9 +17,9 @@ const Hobbies = ({hobbies, showHobbies, count}) => {
     : '';
 
   return (
-    <div>
-      {showHobbies ? <DisplayHobbies hobbies={hobbies}/> : 'Hobbies not allowed'}
+    <div className="hobbiesContainer">
       <p> {activeHobbies} </p>
+      {showHobbies ? <DisplayHobbies hobbies={hobbies}/> : 'Hobbies not allowed'}
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.userInfoContainer {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  align-items: center;
+}
+
+.usrAvatar {
+  max-width: 100%;
+  border-radius: 33% 67% 21% 79% / 56% 51% 49% 44%;
+  transition: all 1s ease;
+}
+
+.usrAvatar:hover {
+  border-radius: 10px;
+  transition: all 1s ease;
+}
