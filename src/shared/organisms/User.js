@@ -8,7 +8,6 @@ function User(props) {
   const avatar = props.avatar || 'Avatar not available';
   return (
     <div className="userInfo">
-      <h2> Sample text </h2>
       <p> {usrName} </p>
       <p> {description} </p>
       <p> {age} </p>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import User from './shared/organisms/User';
+import Hobbies from './shared/organisms/Hobbies'
 import './App.css';
 
 function Avatar() {
@@ -18,22 +19,42 @@ const age = (birthYear) => {
   return currentYear - birthYear;
 }
 
+const count = (arr) => {
+  const activeHobbies = arr.reduce((acc, obj) => {
+    if (obj.isActive) acc++;
+    return acc;
+  }, 0);
+  return activeHobbies;
+}
+
+const hobbies = [
+  {name: 'Soccer', description: 'Some Description', isActive: true },
+  {name: 'Racing', description: 'Some Description', isActive: false },
+  {name: 'Gaming', description: 'Some Description', isActive: true }
+];
+
 class App extends Component {
   render() {
     return (
       <div className="userCardContainer">
         {/* Full data */}
         <div className="userCard">
-        <User 
-          name = "Emmanuel Arturo"
-          description = "Hello, this is my description"
-          age = {age(1998)}
-          avatar = {<Avatar />}
-        />
+          <User 
+            name = "Emmanuel Arturo"
+            description = "Hello, this is my description"
+            age = {age(1998)}
+            avatar = {<Avatar />}
+          />
+          <Hobbies 
+            hobbies={hobbies}
+            showHobbies
+            count={count}
+          />
         </div>
         {/* No data */}
         <div className="userCard">
           <User />
+          <Hobbies />
         </div>
       </div>
     );
