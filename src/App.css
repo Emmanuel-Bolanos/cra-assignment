@@ -13,15 +13,19 @@ body {
 
 .userCard {
   margin: 2rem;
-  padding: 1rem;
-  min-width: fit-content;
-  max-width: 30%;
+  max-width: 40%;
   height: fit-content;
   background-color:	#ccd2eb;
-  box-shadow: inset 0px 1.5rem	#7289da;
+  box-shadow: inset 0px 1.5rem	#7289da, 1px 1px 3px black;
   text-align: center;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   align-items: center;
+}
+
+@media (max-width: 500px) {
+  .userCard {
+    min-width: fit-content;
+  }
 }

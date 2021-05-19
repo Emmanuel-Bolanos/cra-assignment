@@ -2,11 +2,11 @@ import React from 'react';
 import ArrangeHobbies from './ArrangeHobbies';
 import './Hobbies.css';
 
-const DisplayHobbies = ({showHobbies, hobbies}) => {
+const DisplayHobbies = ({hobbies}) => {
   return (
     <ArrangeHobbies 
-      showHobbies = {showHobbies}
       hobbies = {hobbies}
+      className="hobbieList"
     />
   );
 }
@@ -18,7 +18,7 @@ const Hobbies = ({hobbies, showHobbies, count}) => {
 
   return (
     <div className="hobbiesContainer">
-      <p> {activeHobbies} </p>
+      <p className="activeHobbies"> {activeHobbies} </p>
       {showHobbies ? <DisplayHobbies hobbies={hobbies}/> : 'Hobbies not allowed'}
     </div>
   )

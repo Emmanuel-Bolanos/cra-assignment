@@ -20,17 +20,16 @@ const age = (birthYear) => {
 }
 
 const count = (arr) => {
-  const activeHobbies = arr.reduce((acc, obj) => {
+  return arr.reduce((acc, obj) => {
     if (obj.isActive) acc++;
     return acc;
   }, 0);
-  return activeHobbies;
 }
 
 const hobbies = [
   {name: 'Soccer', description: 'Some Description', isActive: true },
-  {name: 'Racing', description: 'Some Description', isActive: false },
-  {name: 'Gaming', description: 'Some Description', isActive: true }
+  {name: 'Racing', description: 'It was fun', isActive: false },
+  {name: 'Gaming', description: 'I am playing Yakuza Zero and the story is great', isActive: true }
 ];
 
 class App extends Component {

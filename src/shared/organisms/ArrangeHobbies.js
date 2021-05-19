@@ -1,13 +1,22 @@
+import React from "react";
+
 const hobbiesList = (hobbies) => {
   return hobbies.map((obj, i) => obj.isActive ?
-    <li key={i}> {`I do ${obj.name}: ${obj.description}`} </li> 
-    : <li key={i}> {`I used to do ${obj.name}: ${obj.description}`} </li> 
+    <div className="hobbieElement" key={i}>
+      <li tabIndex="0"> {`I do ${obj.name}`} </li>
+      <p className="hobbieDescription"> {obj.description} </p>
+    </div>
+    : <div className="hobbieElement" key={i}>
+        <li tabIndex="0"> {`I used to do ${obj.name}`} </li>
+        <p className="hobbieDescription"> {obj.description} </p>
+      </div>
+    
   )
 };
 
 const ArrangeHobbies = ({hobbies}) => {
   return (hobbies.length === 0) ? <p> No hobbies at the moment </p> 
-    : <ul> {hobbiesList(hobbies)} </ul>
+    : <ul className="hobbies"> {hobbiesList(hobbies)} </ul>
 };
 
 export default ArrangeHobbies;
