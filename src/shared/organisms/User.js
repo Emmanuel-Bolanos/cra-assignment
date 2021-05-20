@@ -1,17 +1,19 @@
 import React from 'react';
 import './User.css';
 
+// Default. In case the user does not provide an avatar
 function NoAvatar() {
   return (
     <img 
-      src="/imgNotFound.jpg"
-      title="Avatar not found"
-      alt="Avatar not found"
+      src="/defaultAvatar.png"
+      title="Default Avatar"
+      alt="Default Avatar"
       className="usrAvatar"
     />
   )
 };
 
+// reveives user data. Sets default values if there is missing info
 function User({name, description, age, avatar}) {
   const usrName = name || 'Name not available';
   const usrDecription = description || 'Description not available';

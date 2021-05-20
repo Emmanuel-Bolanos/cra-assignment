@@ -1,5 +1,9 @@
 # Creating a basic project with CRA
 
+The project is deployed with Github via Netlify :tada:
+
+It can be accessed at: https://democra.emmasandbox.com
+
 ## Instructions
 
 - [X] Create a project using CRA
