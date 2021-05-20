@@ -19,7 +19,7 @@ function User({name, description, age, avatar}) {
   const usrAvatar = avatar || <NoAvatar />;
   return (
     <div className="userInfoContainer">
-      <p> {usrAvatar} </p>
+      {usrAvatar}
       <div className="usrData">
         <h2> {usrName} </h2>
         <p> {usrDecription} </p>

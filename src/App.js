@@ -35,27 +35,44 @@ const hobbies = [
 class App extends Component {
   render() {
     return (
-      <div className="userCardContainer">
-        {/* Full data */}
-        <div className="userCard">
-          <User 
-            name = "Emmanuel Arturo"
-            description = "Hello, this is my description"
-            age = {age(1998)}
-            avatar = {<Avatar />}
-          />
-          <Hobbies 
-            hobbies={hobbies}
-            showHobbies
-            count={count}
-          />
+      <React.Fragment>
+        <h1> Hobbie Network </h1>
+        <div className="userCardContainer">
+          {/* Full data */}
+          <div className="userCard">
+            <h2 className="marker">Full data demo</h2>
+            <User 
+              name = "Emmanuel Arturo"
+              description = "Hello, this is my description"
+              age = {age(1998)}
+              avatar = {<Avatar />}
+            />
+            <Hobbies 
+              hobbies={hobbies}
+              showHobbies
+              count={count}
+            />
+          </div>
+          {/* Partial */}
+          <div className="userCard">
+            <h2 className="marker">Partial data demo</h2>
+            <User 
+              name = "John Doe"
+              age = {age(1990)}
+            />
+            <Hobbies 
+              hobbies={hobbies}
+              count={count}
+            />
+          </div>
+          {/* No data */}
+          <div className="userCard">
+            <h2 className="marker">No data demo</h2>
+            <User />
+            <Hobbies />
+          </div>
         </div>
-        {/* No data */}
-        <div className="userCard">
-          <User />
-          <Hobbies />
-        </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
